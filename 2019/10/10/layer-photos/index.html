@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang>
+  <head><meta name="generator" content="Hexo 3.9.0">
+    
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="description" content="layer.photos">
+
+
+
+
+  <meta name="keywords" content="layui踩坑日记,">
+
+
+
+
+
+  <link rel="alternate" href="/default" title="走在路上">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1">
+
+
+
+<link rel="canonical" href="http://yoursite.com/2019/10/10/layer-photos/">
+
+
+<meta name="description" content="layer.photos的两种使用方式 直接绑定页面元素中的图片列表，data需绑定外层div    我用到的主要是第二种方式，第二种方式layer.photos需要接收一个json数据但是后端传过来的是一组字符串，说实话，第一次把字符串处理成json数据格式我很想逃避，用了各种方法去使用上面讲到的第一种方式，但效果总是不理想。不得已，还是得干。  12345678910111213let img">
+<meta name="keywords" content="layui踩坑日记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="layer.photos">
+<meta property="og:url" content="http://yoursite.com/2019/10/10/layer-photos/index.html">
+<meta property="og:site_name" content="走在路上">
+<meta property="og:description" content="layer.photos的两种使用方式 直接绑定页面元素中的图片列表，data需绑定外层div    我用到的主要是第二种方式，第二种方式layer.photos需要接收一个json数据但是后端传过来的是一组字符串，说实话，第一次把字符串处理成json数据格式我很想逃避，用了各种方法去使用上面讲到的第一种方式，但效果总是不理想。不得已，还是得干。  12345678910111213let img">
+<meta property="og:locale" content="zh-tw">
+<meta property="og:image" content="http://pz5lmftsp.bkt.clouddn.com/2019-10-10-18-09-10.png">
+<meta property="og:image" content="http://pz5lmftsp.bkt.clouddn.com/2019-10-10-18-12-47.png">
+<meta property="og:updated_time" content="2019-10-10T10:18:40.228Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="layer.photos">
+<meta name="twitter:description" content="layer.photos的两种使用方式 直接绑定页面元素中的图片列表，data需绑定外层div    我用到的主要是第二种方式，第二种方式layer.photos需要接收一个json数据但是后端传过来的是一组字符串，说实话，第一次把字符串处理成json数据格式我很想逃避，用了各种方法去使用上面讲到的第一种方式，但效果总是不理想。不得已，还是得干。  12345678910111213let img">
+<meta name="twitter:image" content="http://pz5lmftsp.bkt.clouddn.com/2019-10-10-18-09-10.png">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
+  
+
+
+
+    <title> layer.photos - 走在路上 </title>
+  </head>
+
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo">走在路上</a>
+    </h1>
+
+    <nav id="nav-top">
+        
+            <ul id="menu-top" class="nav-top-items">
+                
+                    <li class="menu-item">
+                        <a href="/archives">
+                            
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/about">
+                            
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        
+  </nav>
+</div>
+
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          layer.photos
+        
+      </h1>
+
+      <time class="post-time">
+          10月 10 2019
+      </time>
+    </header>
+
+
+
+    
+            <div class="post-content">
+            <h1 id="layer-photos的两种使用方式"><a href="#layer-photos的两种使用方式" class="headerlink" title="layer.photos的两种使用方式"></a>layer.photos的两种使用方式</h1><ol>
+<li>直接绑定页面元素中的图片列表，data需绑定外层div<br><img src="http://pz5lmftsp.bkt.clouddn.com/2019-10-10-18-09-10.png" alt="2019-10-10-18-09-10"></li>
+</ol>
+<hr>
+<ol start="2">
+<li><p>我用到的主要是第二种方式，第二种方式layer.photos需要接收一个json数据<br><img src="http://pz5lmftsp.bkt.clouddn.com/2019-10-10-18-12-47.png" alt="2019-10-10-18-12-47"><br>但是后端传过来的是一组字符串，说实话，第一次把字符串处理成json数据格式我很想逃避，用了各种方法去使用上面讲到的第一种方式，但效果总是不理想。不得已，还是得干。</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">let img = data.courseImgs.split(&apos;,&apos;);</span><br><span class="line">var imgList = [];</span><br><span class="line"></span><br><span class="line">for(let index = 0; index&lt;img.length; index++)&#123;</span><br><span class="line">    var json = &#123;&#125;;</span><br><span class="line">    json.src = img[index];</span><br><span class="line">    imgList.push(json);</span><br><span class="line">&#125;</span><br><span class="line">imgList = JSON.parse(JSON.stringify(&#123;&quot;data&quot;: imgList&#125;))</span><br><span class="line">layer.photos(&#123;</span><br><span class="line">    photos: imgList,</span><br><span class="line">    anim: 0 </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>其中layer.photos接收的json字符串是不能带有像数组一样前面的index值的，否则渲染的时候只能展示第一张图片，而且下面显示序号为1/undefined</p>
+
+            </div>
+          
+
+    
+      <footer class="post-footer">
+		
+		<div class="post-tags">
+		  
+			<a href="/tags/layui踩坑日记/">layui踩坑日记</a>
+		  
+		</div>
+		
+
+        
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/2019/10/10/hello-world/">
+        <span class="next-text nav-default">Hello World</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </footer>
+    
+  </article>
+
+    </div>
+
+      </div>
+
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+        2014 -
+    
+    2019
+    <span class="footer-author">leos.</span>
+    <span class="power-by">
+        Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a> and <a class="theme-link" href="https://github.com/frostfan/hexo-theme-polarbear">Polar Bear</a>
+    </span>
+</span>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
+
+  </body>
+</html>
