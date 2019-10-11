@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang>
+  <head><meta name="generator" content="Hexo 3.9.0">
+    
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="description" content="layui02">
+
+
+
+
+  <meta name="keywords" content="layui踩坑日记,">
+
+
+
+
+
+  <link rel="alternate" href="/default" title="走在路上">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1">
+
+
+
+<link rel="canonical" href="http://yoursite.com/2019/10/11/layui02/">
+
+
+<meta name="description" content="今天遇到的两个坑layui弹出层  如果弹出层绑定的是dom元素，遮罩层会覆盖掉弹出层，在文档中有写到，要把弹出元素放到body外面，因为遮罩层是给整个body加的这时候我们就用这两句话，改变一下遮罩层绑定的位置就可以了  数据表格渲染  这个地方以前曾经在文档里看到过fixed必须放在cols最后一个这次终于实际踩了一下坑">
+<meta name="keywords" content="layui踩坑日记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="layui02">
+<meta property="og:url" content="http://yoursite.com/2019/10/11/layui02/index.html">
+<meta property="og:site_name" content="走在路上">
+<meta property="og:description" content="今天遇到的两个坑layui弹出层  如果弹出层绑定的是dom元素，遮罩层会覆盖掉弹出层，在文档中有写到，要把弹出元素放到body外面，因为遮罩层是给整个body加的这时候我们就用这两句话，改变一下遮罩层绑定的位置就可以了  数据表格渲染  这个地方以前曾经在文档里看到过fixed必须放在cols最后一个这次终于实际踩了一下坑">
+<meta property="og:locale" content="zh-tw">
+<meta property="og:image" content="http://pz5lmftsp.bkt.clouddn.com/2019-10-11-19-07-30.png">
+<meta property="og:image" content="http://pz5lmftsp.bkt.clouddn.com/2019-10-11-19-13-02.png">
+<meta property="og:updated_time" content="2019-10-11T11:15:16.559Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="layui02">
+<meta name="twitter:description" content="今天遇到的两个坑layui弹出层  如果弹出层绑定的是dom元素，遮罩层会覆盖掉弹出层，在文档中有写到，要把弹出元素放到body外面，因为遮罩层是给整个body加的这时候我们就用这两句话，改变一下遮罩层绑定的位置就可以了  数据表格渲染  这个地方以前曾经在文档里看到过fixed必须放在cols最后一个这次终于实际踩了一下坑">
+<meta name="twitter:image" content="http://pz5lmftsp.bkt.clouddn.com/2019-10-11-19-07-30.png">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
+  
+
+
+
+    <title> layui02 - 走在路上 </title>
+  </head>
+
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo">走在路上</a>
+    </h1>
+
+    <nav id="nav-top">
+        
+            <ul id="menu-top" class="nav-top-items">
+                
+                    <li class="menu-item">
+                        <a href="/archives">
+                            
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/about">
+                            
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        
+  </nav>
+</div>
+
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          layui02
+        
+      </h1>
+
+      <time class="post-time">
+          10月 11 2019
+      </time>
+    </header>
+
+
+
+    
+            <div class="post-content">
+            <h1 id="今天遇到的两个坑"><a href="#今天遇到的两个坑" class="headerlink" title="今天遇到的两个坑"></a>今天遇到的两个坑</h1><h2 id="layui弹出层"><a href="#layui弹出层" class="headerlink" title="layui弹出层"></a>layui弹出层</h2><p><img src="http://pz5lmftsp.bkt.clouddn.com/2019-10-11-19-07-30.png" alt="2019-10-11-19-07-30"></p>
+<blockquote>
+<p>如果弹出层绑定的是dom元素，遮罩层会覆盖掉弹出层，在文档中有写到，要把弹出元素放到body外面，因为遮罩层是给整个body加的<br>这时候我们就用这两句话，改变一下遮罩层绑定的位置就可以了</p>
+</blockquote>
+<h2 id="数据表格渲染"><a href="#数据表格渲染" class="headerlink" title="数据表格渲染"></a>数据表格渲染</h2><p><img src="http://pz5lmftsp.bkt.clouddn.com/2019-10-11-19-13-02.png" alt="2019-10-11-19-13-02"></p>
+<blockquote>
+<p>这个地方以前曾经在文档里看到过<br>fixed必须放在cols最后一个<br>这次终于实际踩了一下坑</p>
+</blockquote>
+
+            </div>
+          
+
+    
+      <footer class="post-footer">
+		
+		<div class="post-tags">
+		  
+			<a href="/tags/layui踩坑日记/">layui踩坑日记</a>
+		  
+		</div>
+		
+
+        
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/2019/10/10/for-u/">
+        <span class="next-text nav-default">世界那么大让我怦然心动的却只有你</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </footer>
+    
+  </article>
+
+    </div>
+
+      </div>
+
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+        2014 -
+    
+    2019
+    <span class="footer-author">leos.</span>
+    <span class="power-by">
+        Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a> and <a class="theme-link" href="https://github.com/frostfan/hexo-theme-polarbear">Polar Bear</a>
+    </span>
+</span>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
+
+  </body>
+</html>
