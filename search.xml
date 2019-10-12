@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>layui02</title>
+      <link href="/2019/10/11/layui02/"/>
+      <url>/2019/10/11/layui02/</url>
+      
+        <content type="html"><![CDATA[<h1 id="今天遇到的两个坑"><a href="#今天遇到的两个坑" class="headerlink" title="今天遇到的两个坑"></a>今天遇到的两个坑</h1><h2 id="layui弹出层"><a href="#layui弹出层" class="headerlink" title="layui弹出层"></a>layui弹出层</h2><p><img src="http://pz5lmftsp.bkt.clouddn.com/2019-10-11-19-07-30.png" alt="2019-10-11-19-07-30"></p><blockquote><p>如果弹出层绑定的是dom元素，遮罩层会覆盖掉弹出层，在文档中有写到，要把弹出元素放到body外面，因为遮罩层是给整个body加的<br>这时候我们就用这两句话，改变一下遮罩层绑定的位置就可以了</p></blockquote><h2 id="数据表格渲染"><a href="#数据表格渲染" class="headerlink" title="数据表格渲染"></a>数据表格渲染</h2><p><img src="http://pz5lmftsp.bkt.clouddn.com/2019-10-11-19-13-02.png" alt="2019-10-11-19-13-02"></p><blockquote><p>这个地方以前曾经在文档里看到过<br>fixed必须放在cols最后一个<br>这次终于实际踩了一下坑</p></blockquote>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> layui踩坑日记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>世界那么大让我怦然心动的却只有你</title>
+      <link href="/2019/10/10/for-u/"/>
+      <url>/2019/10/10/for-u/</url>
+      
+        <content type="html"><![CDATA[<p><img src="http://pz5lmftsp.bkt.clouddn.com/2019-10-10-18-36-28.png" alt="2019-10-10-18-36-28"></p><blockquote><p>我大概永远也不会忘记初识你的样子<br>那时我的vx头像是宗介<br>你见到我说的最多的一句话就是<br>波妞喜欢宗介<br>我想你大概还不知道<br>大约过了一两个月之后我才发现<br>你的头像原来不是波妞</p></blockquote><hr><blockquote><p>你的天真可爱触动了 我的心<br>犹豫了一番之后<br>我点开你的头像,想跟你开启一段故事<br>竟然被拒绝。。。<br>你的回复是害怕把我坑跑<br>唉<br>无奈之下，我只能再加一次，成功了，嘻嘻。</p></blockquote><blockquote><p>未完···················</p></blockquote><hr><h2 id="情话说的再多也不如一心一意"><a href="#情话说的再多也不如一心一意" class="headerlink" title="情话说的再多也不如一心一意"></a>情话说的再多也不如一心一意</h2><p> for u</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> for u </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>layer.photos</title>
+      <link href="/2019/10/10/layer-photos/"/>
+      <url>/2019/10/10/layer-photos/</url>
+      
+        <content type="html"><![CDATA[<h1 id="layer-photos的两种使用方式"><a href="#layer-photos的两种使用方式" class="headerlink" title="layer.photos的两种使用方式"></a>layer.photos的两种使用方式</h1><ol><li>直接绑定页面元素中的图片列表，data需绑定外层div<br><img src="http://pz5lmftsp.bkt.clouddn.com/2019-10-10-18-09-10.png" alt="2019-10-10-18-09-10"></li></ol><hr><ol start="2"><li><p>我用到的主要是第二种方式，第二种方式layer.photos需要接收一个json数据<br><img src="http://pz5lmftsp.bkt.clouddn.com/2019-10-10-18-12-47.png" alt="2019-10-10-18-12-47"><br>但是后端传过来的是一组字符串，说实话，第一次把字符串处理成json数据格式我很想逃避，用了各种方法去使用上面讲到的第一种方式，但效果总是不理想。不得已，还是得干。</p> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">let img = data.courseImgs.split(&apos;,&apos;);</span><br><span class="line">var imgList = [];</span><br><span class="line"></span><br><span class="line">for(let index = 0; index&lt;img.length; index++)&#123;</span><br><span class="line">    var json = &#123;&#125;;</span><br><span class="line">    json.src = img[index];</span><br><span class="line">    imgList.push(json);</span><br><span class="line">&#125;</span><br><span class="line">imgList = JSON.parse(JSON.stringify(&#123;&quot;data&quot;: imgList&#125;))</span><br><span class="line">layer.photos(&#123;</span><br><span class="line">    photos: imgList,</span><br><span class="line">    anim: 0 </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li></ol><p>其中layer.photos接收的json字符串是不能带有像数组一样前面的index值的，否则渲染的时候只能展示第一张图片，而且下面显示序号为1/undefined</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> layui踩坑日记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
