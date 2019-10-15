@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>vue-element-admin按需引入element</title>
+      <link href="/2019/10/15/vue-element-admin/"/>
+      <url>/2019/10/15/vue-element-admin/</url>
+      
+        <content type="html"><![CDATA[<h1 id="element-UI-按需引入"><a href="#element-UI-按需引入" class="headerlink" title="element-UI 按需引入"></a>element-UI 按需引入</h1><blockquote><p>过程大体就是element官网上的那几个步骤</p></blockquote><ol><li>先把全局引入的element-ui给去掉<br><img src="http://pz5lmftsp.bkt.clouddn.com/2019-10-15-18-14-34.png" alt="2019-10-15-18-14-34"></li><li>安装syntax-dynamic-import插件</li><li>在babel配置文件中使用安装的插件<br><img src="http://pz5lmftsp.bkt.clouddn.com/2019-10-15-18-16-14.png" alt="2019-10-15-18-16-14"></li><li>在main.js中把用到的组件引入<br><img src="http://pz5lmftsp.bkt.clouddn.com/2019-10-15-18-17-16.png" alt="2019-10-15-18-17-16"></li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> vue-admin </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>layui02</title>
       <link href="/2019/10/11/layui02/"/>
       <url>/2019/10/11/layui02/</url>
