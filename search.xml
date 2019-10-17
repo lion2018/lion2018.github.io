@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>vx-miniapp-01</title>
+      <link href="/2019/10/17/vx-miniapp-01/"/>
+      <url>/2019/10/17/vx-miniapp-01/</url>
+      
+        <content type="html"><![CDATA[<h1 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h1><blockquote><p>禁止页面下拉刷新<br><img src="http://pz5lmftsp.bkt.clouddn.com/2019-10-17-09-58-42.png" alt="2019-10-17-09-58-42"><br>像这个页面<br>它的标题栏和上部的绿色背景其实是两部分<br>用户在下拉时，两部分会分离，显示中间的空白<br>很不美观<br>有两种解决方案</p></blockquote><ol><li>使下拉部分颜色也为绿色</li><li>禁止下拉<blockquote><p>这次我用的是第二种方法<br>如果后面有时间我再考虑下第一种怎么实现</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&quot;enablePullDownRefresh&quot;: false,</span><br><span class="line">&quot;disableScroll&quot;:true</span><br></pre></td></tr></table></figure></li></ol><blockquote><p>方法很简单,在禁止下拉页面的json配置文件中加上上面两局话就ok了</p></blockquote>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> vx-app </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>vue-element-admin按需引入element</title>
       <link href="/2019/10/15/vue-element-admin/"/>
       <url>/2019/10/15/vue-element-admin/</url>
